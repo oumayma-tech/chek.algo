@@ -3,25 +3,26 @@ VAR
  i:INTEGER
  count_vowel=0
  count_words=0
- count_st=0
+ 
  sentenses:=STRING
 BEGIN
- write('write a sentenses')
+REPEAT
+  write('write a sentenses')
  read(sentenses)
- 
- FOR i FROM 0 TO sentenses.length  DO
-   IF (sentenses[i])<>' ' AND (sentenses[i+1])=' '  THEN
+UNTIL (sentenses[(sentenses.length)]=".")
+
+ FOR i FROM 0 TO sentenses.length DO
+   IF (sentenses[i])=' ' AND (sentenses[i+1]<>' ')  THEN
    count_words:=count_words+1
-  ELSE IF  sentenses[i] in ('a','e','i','o','u','y') THEN
+  ELSE IF  (sentenses[i]) in ['a','e','i','o','u','y','w'] THEN
   count_vowel:=count_vowel+1
-  ELSE IF sentenses[i]<>' ' THEN
-  count_st:=count_st+1
-  ELSE
-  i:=i+1
 END_IF   
  END_FOR
+ write('nb de caratère est',i)
  write(count_words)
- write(count_st)
  write(count_vowel)
 
 END
+  
+
+
