@@ -1,6 +1,6 @@
 ALGORITHM length
 VAR
- i,j,k:INTEGER
+ i:INTEGER
  count_vowel=0
  count_words=0
  count_st=0
@@ -10,7 +10,7 @@ BEGIN
  read(sentenses)
  
  FOR i FROM 0 TO sentenses.length  DO
-   IF (sentenses[i])<>' ' AND sentenses[i+1]=' '  THEN
+   IF (sentenses[i])<>' ' AND (sentenses[i+1])=' '  THEN
    count_words:=count_words+1
   ELSE IF  sentenses[i] in ('a','e','i','o','u','y') THEN
   count_vowel:=count_vowel+1
