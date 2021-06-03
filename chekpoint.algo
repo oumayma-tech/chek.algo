@@ -1,33 +1,7 @@
-// ALGORITHM length
-// VAR
-//  i,count_vowel ,count_words :INTEGER
-//  c:CHAR
-//  ch:''
-// BEGIN
-// i=0; count_vowel=0;count_words=1
-// REPEAT
-// write('write a caracter')
-//  read(c)
-//  IF  (c<>'.') THEN
-//   i:=i+1
-//   ch:=ch+c
-//  IF  c in ['a','e','i','o','u','y','w'] THEN
-//   count_vowel:=count_vowel+1
-//   ELSE IF (c=' ') THEN
-//   count_words=count_words+1
-// END_IF   
-//  UNTIL(c='.')
-//  i:=length[i]
-//  write('nb de caratère est',i)
-//  write('nb des mots est' ,count_words)
-//  write('nb des voyelles est',count_vowel)
 
-// END
-  
 ALGORITHM length
 VAR
  i,count_vowel,count_words:INTEGER
- Ch:STRING
  c:CHAR
 BEGIN
 i=0;count_vowel=0;count_words=0
@@ -37,17 +11,14 @@ REPEAT
   // IF (c<>'.') THEN
     IF (c=' ') THEN
    count_words:=count_words+1
- ELSE IF MAJUS C in ['A','E','I','O','U','Y','W'] THEN
+ ELSE_IF c.toUpperCase() in ['A','E','I','O','U','Y','W'] THEN
   count_vowel:=count_vowel+1
 END IF
-  i:=i+1
-  ch:=ch+c
+  i:=i+1 
 UNTIL (c='.')
- write(ch)
  write('le nb de mot est',count_words)
  write(l'e nb de voyelle est',count_vowel)
  write('le nb de caratère est',i)
- 
 END
 
 
