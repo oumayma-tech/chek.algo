@@ -4,7 +4,7 @@ VAR
  i,count_vowel,count_words:INTEGER
  c:CHAR
 BEGIN
-i=0;count_vowel=0;count_words=0
+i=0;count_vowel=0;count_words=1
 REPEAT
   write('write a caracter')
   read(c)
@@ -20,5 +20,10 @@ UNTIL (c='.')
  write(l'e nb de voyelle est',count_vowel)
  write('le nb de caratère est',i)
 END
+
+
+ 
+
+ 
 
 
